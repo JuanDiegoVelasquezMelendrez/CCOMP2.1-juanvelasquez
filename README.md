@@ -1,5 +1,5 @@
 # CCOMP2-2022-2_JuanVelasquez
 
 
-juan diego
-velasquez melendrez
+Juan Diego
+Velasquez Melendrez
