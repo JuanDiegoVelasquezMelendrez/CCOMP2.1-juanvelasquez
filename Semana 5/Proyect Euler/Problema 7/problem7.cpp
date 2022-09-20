@@ -7,7 +7,7 @@ bool esPrimo(int n) {
     int contador{0};
 
     if (n==1){
-        return false;
+        return 0;
     }
     else {
         for(int i =n; i>=1; i--){
@@ -17,10 +17,10 @@ bool esPrimo(int n) {
             }
         }
         if(contador == 2) {
-            return true;
+            return 1;
         }
         else {
-            return false;
+            return 0;
         }
     }
 }
