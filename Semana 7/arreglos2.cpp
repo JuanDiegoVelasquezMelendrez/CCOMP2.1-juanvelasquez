@@ -10,6 +10,25 @@ void printArray(const Point array[], int tam) {
     cout << "]" << endl;
 }
 
+void bsort(Point array[], int tam) {
+    for(int i = 0; i < tam; i++) {
+        for(int j = i + 1; j < tam; j++) {
+            if(array[i].getX() > array[j].getX()) {
+                int x_one = array[i].getX();
+                int y_one = array[i].getY();
+                int x_two = array[j].getX();
+                int y_two = array[j].getY();
+                
+                array[i].setX(x_two);
+                array[i].setY(y_two);
+                array[j].setX(x_one);
+                array[j].setY(y_one);
+                
+            }
+        }
+    }
+}
+
 int main() {
     Point p1;
     Point p2(4, 5);
@@ -21,6 +40,12 @@ int main() {
     int tam = sizeof(arr) / sizeof(arr[0]);
 
     printArray(arr, tam);
+
+    bsort(arr,tam);
+
+    printArray(arr, tam);
+
+
         
     return 0;
 }
