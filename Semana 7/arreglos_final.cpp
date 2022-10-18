@@ -10,8 +10,21 @@ void printArray(const Point array[], int tam) {
     cout << "]" << endl;
 }
 
+void printArrayInt(const int array[], int tam) {
+    cout << "{ ";
+    for(int i = 0; i < tam-1; i++) {
+        cout << array[1] << " ,";
+    }
+    cout << array[tam-1] << " }" << endl;
+}
+
 void intercambio(Point &a, Point &b) {
     Point tmp = a;
+    a = b;
+    b = tmp;
+}
+void intercambio_int(int &a, int &b) {
+    int tmp = a;
     a = b;
     b = tmp;
 }
@@ -28,6 +41,18 @@ void bsort(Point array[], int tam) {
     }
 }
 
+/*
+Implementar insertionsort
+*/
+
+void iSort(int array[], int tam) {
+    int key,j;
+    for(int i = 0; i < tam; i++) {
+        
+        
+    }    
+}
+
 int main() {
     Point p1;
     Point p2(4, 5);
@@ -41,6 +66,11 @@ int main() {
     printArray(arr, tam);
     bsort(arr, tam);
     printArray(arr, tam);
+
+    int arr2[] = {5,4,3,7,8,4};
+    int tam2 =sizeof(arr2) / sizeof(arr2[0]);
+
+    printArrayInt(arr2;tam);
         
     return 0;
 }
