@@ -70,7 +70,7 @@ int main() {
     int arr2[] = {5,4,3,7,8,4};
     int tam2 =sizeof(arr2) / sizeof(arr2[0]);
 
-    printArrayInt(arr2;tam);
+    printArrayInt(arr2,tam);
         
     return 0;
 }
