@@ -68,6 +68,8 @@ void DynamicIntArray::insert(int elem, int pos) {
 } 
 
 void DynamicIntArray::remove(int pos) {
+
+    //Tarea.
     
 } 
 
