@@ -68,8 +68,22 @@ void DynamicIntArray::insert(int elem, int pos) {
 } 
 
 void DynamicIntArray::remove(int pos) {
-
-    //Tarea.
+    // 1
+    int *tmp = new int[size - 1];
+    // 2
+    for(int i = 0, j = 0; i < size; i++, j++) {
+        if( j == pos) {
+            i++;
+        } else {
+            tmp[j] = data[i];
+        }        
+    }
+    // 3
+    size -= 1;
+    // 4
+    delete [] data;
+    // 5
+    data = tmp;
     
 } 
 
