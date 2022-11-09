@@ -5,13 +5,13 @@
 
 #include "Point.h"
 
-class DynamicArrayOfPoints {
+class DynamicPointArray {
 
 public:
 
-    DynamicArrayOfPoints();
-    DynamicArrayOfPoints(const Point arr[], int size);
-    DynamicArrayOfPoints(const DynamicArrayOfPoints &);
+    DynamicPointArray();
+    DynamicPointArray(const Point arr[], int size);
+    DynamicPointArray(const DynamicPointArray &);
     
     int getSize() const;
     void push_back(Point elem);
@@ -21,12 +21,12 @@ public:
 
     Point getAt(int pos) const;
 
-    ~DynamicArrayOfPoints();
+    ~DynamicPointArray();
 
 private:
     int size;
     Point *data;
-    friend std::ostream& operator<< (std::ostream &output, const DynamicArrayOfPoints &p);
+    friend std::ostream& operator<< (std::ostream &output, const DynamicPointArray &p);
 
 };
 

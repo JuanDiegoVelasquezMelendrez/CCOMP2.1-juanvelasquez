@@ -3,20 +3,20 @@
 
 #include "Point.h"
 
-class StaticArrayOfPoints {
+class StaticPointArray {
         int size;
         Point *data;     
-        friend std::ostream& operator<< (std::ostream &output, const StaticArrayOfPoints &p);
+        friend std::ostream& operator<< (std::ostream &output, const StaticPointArray &p);
     public:
-        StaticArrayOfPoints(int size);
-        StaticArrayOfPoints(const StaticArrayOfPoints &o);
+        StaticPointArray(int size);
+        StaticPointArray(const StaticPointArray &o);
 
         void setAt(int index, Point value);
         Point getAt(int index) const ;
         int getSize() const ;
         void set_value(int pos, std::string xory, int value);
 
-        ~StaticArrayOfPoints();
+        ~StaticPointArray();
 };
 
 #endif

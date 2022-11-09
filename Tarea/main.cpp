@@ -1,12 +1,14 @@
 #include <iostream>
+
 #include "Point.h"
-#include "DynamicArrayOfPoints.h"
+#include "DynamicPointArray.h"
+#include "StaticPointArray.h"
 
 using namespace std;
 
 int main() {
 
-    DynamicArrayOfPoints array;
+    DynamicPointArray array;
     
 
     Point p1;

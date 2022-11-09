@@ -1,16 +1,16 @@
 #include <iostream>
 
-#include "DynamicArrayOfPoints.h"
+#include "DynamicPointArray.h"
 #include "Point.h"
 
-DynamicArrayOfPoints::DynamicArrayOfPoints() {
+DynamicPointArray::DynamicPointArray() {
     
     this->size = 0;
     data = new Point[0];
 
 }
 
-DynamicArrayOfPoints::DynamicArrayOfPoints(const Point arr[], int size){
+DynamicPointArray::DynamicPointArray(const Point arr[], int size){
 
     this->size = size;
     data = new Point[size];
@@ -19,7 +19,7 @@ DynamicArrayOfPoints::DynamicArrayOfPoints(const Point arr[], int size){
 
 }
 
-DynamicArrayOfPoints::DynamicArrayOfPoints(const DynamicArrayOfPoints &o) {
+DynamicPointArray::DynamicPointArray(const DynamicPointArray &o) {
 
         this->size = o.size;
         this->data = new Point[o.size];
@@ -28,11 +28,11 @@ DynamicArrayOfPoints::DynamicArrayOfPoints(const DynamicArrayOfPoints &o) {
 
 }
 
-int DynamicArrayOfPoints::getSize() const {
+int DynamicPointArray::getSize() const {
     return size;
 }
 
-void DynamicArrayOfPoints::push_back(Point elem) {
+void DynamicPointArray::push_back(Point elem) {
     // 1
     Point *tmp = new Point[size + 1];
     // 2
@@ -48,7 +48,7 @@ void DynamicArrayOfPoints::push_back(Point elem) {
     data = tmp;
 }
 
-void DynamicArrayOfPoints::insert(Point elem, int pos) {
+void DynamicPointArray::insert(Point elem, int pos) {
     // 1
     Point *tmp = new Point[size + 1];
     // 2
@@ -68,7 +68,7 @@ void DynamicArrayOfPoints::insert(Point elem, int pos) {
     data = tmp;
 } 
 
-void DynamicArrayOfPoints::remove(int pos) {
+void DynamicPointArray::remove(int pos) {
     // 1
     Point *tmp = new Point[size - 1];
     // 2
@@ -88,18 +88,18 @@ void DynamicArrayOfPoints::remove(int pos) {
     
 } 
 
-Point DynamicArrayOfPoints::getAt(int pos) const {
+Point DynamicPointArray::getAt(int pos) const {
 
     return data[pos];
 
 }
 
-DynamicArrayOfPoints::~DynamicArrayOfPoints() {
+DynamicPointArray::~DynamicPointArray() {
 
     delete[] data;
 
 }
-void DynamicArrayOfPoints::set_value(int pos, std::string xory, int value) {
+void DynamicPointArray::set_value(int pos, std::string xory, int value) {
 
     if (xory == "x" || xory == "X") {
         
@@ -116,11 +116,9 @@ void DynamicArrayOfPoints::set_value(int pos, std::string xory, int value) {
         
     }
     
-    
-
 }
 
-std::ostream& operator<<(std::ostream & output, const DynamicArrayOfPoints &p) {
+std::ostream& operator<<(std::ostream & output, const DynamicPointArray &p) {
     
     output << "[";
 
