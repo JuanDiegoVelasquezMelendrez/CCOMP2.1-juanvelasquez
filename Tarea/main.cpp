@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
     DynamicArrayOfPoints array;
-    cout << array.getSize() << endl;
+    
 
     Point p1;
     Point p2;
@@ -17,7 +17,11 @@ int main() {
     array.push_back(p2);
     array.push_back(p3);
 
-    cout << array << endl;
+    cout << array.getSize() << endl;
+
+    //cout << array << endl;
+
+    cout << p1 << endl;
 
     return 0;
 }

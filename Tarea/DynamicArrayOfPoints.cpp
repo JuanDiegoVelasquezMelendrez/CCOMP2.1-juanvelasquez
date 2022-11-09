@@ -99,13 +99,33 @@ DynamicArrayOfPoints::~DynamicArrayOfPoints() {
     delete[] data;
 
 }
+void DynamicArrayOfPoints::set_value(int pos, std::string xory, int value) {
+
+    if (xory == "x" || xory == "X") {
+        
+        data[pos-1].setX(value);
+
+    }
+    else {
+
+        if (xory == "y" || xory == "Y") {
+
+            data[pos-1].setY(value);
+
+        }
+        
+    }
+    
+    
+
+}
 
 std::ostream& operator<<(std::ostream & output, const DynamicArrayOfPoints &p) {
     
     output << "[";
 
 
-    for (int i = 0; i < p.size; i++) {
+    for (int i = 0; i < p.getSize(); i++) {
 
         output << " " << p.getAt(i);
 
