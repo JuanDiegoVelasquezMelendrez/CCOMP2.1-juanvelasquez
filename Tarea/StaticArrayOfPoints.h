@@ -14,6 +14,7 @@ class StaticArrayOfPoints {
         void setAt(int index, Point value);
         Point getAt(int index) const ;
         int getSize() const ;
+        void set_value(int pos, std::string xory, int value);
 
         ~StaticArrayOfPoints();
 };

@@ -29,6 +29,24 @@ int StaticArrayOfPoints::getSize() const {
     return size;
 }
 
+void StaticArrayOfPoints::set_value(int pos, std::string xory, int value) {
+
+    if (xory == "x" || xory == "X") {
+        
+        data[pos-1].setX(value);
+
+    }
+    else {
+
+        if (xory == "y" || xory == "Y") {
+
+            data[pos-1].setY(value);
+
+        }
+        
+    }
+}
+
 StaticArrayOfPoints::~StaticArrayOfPoints() {
     delete [] data;
 }
