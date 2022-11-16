@@ -119,23 +119,12 @@ void DynamicPointArray::set_value(int pos, std::string xory, int value) {
 }
 
 std::ostream& operator<<(std::ostream & output, const DynamicPointArray &p) {
-    
-    output << "[";
-
 
     for (int i = 0; i < p.getSize(); i++) {
 
         output << " " << p.getAt(i);
-
-        if (i =! p.size-1) {
-
-            output << " , ";
-
-        }
     
     }
-
-    output << " ]";
 
     return output;
 

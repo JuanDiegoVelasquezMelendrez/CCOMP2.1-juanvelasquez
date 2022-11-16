@@ -53,23 +53,11 @@ StaticPointArray::~StaticPointArray() {
 
 std::ostream& operator<<(std::ostream & output, const StaticPointArray &p) {
     
-    output << "[";
-
-
-    for (int i = 0; i < p.size; i++) {
+       for (int i = 0; i < p.getSize(); i++) {
 
         output << " " << p.getAt(i);
-
-        if (i =! p.size-1) {
-
-            output << " , ";
-
-        }
     
     }
 
-    output << " ]";
-
     return output;
-
 }

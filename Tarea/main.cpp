@@ -21,9 +21,7 @@ int main() {
 
     cout << array.getSize() << endl;
 
-    //cout << array << endl;
-
-    cout << p1 << endl;
-
+    cout << array << endl;
+    
     return 0;
 }
